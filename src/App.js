@@ -1,9 +1,13 @@
 import './App.css';
 import { SignIn } from './pages/SignIn/SignIn'
+import MainPage from './pages/MainPage/MainPage';
 
 function App() {
   return (
-    <SignIn></SignIn>
+    <div>
+        {/* <MainPage></MainPage> */}
+        <SignIn></SignIn>
+    </div>
   );
 }
 
