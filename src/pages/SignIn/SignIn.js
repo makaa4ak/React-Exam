@@ -16,11 +16,11 @@ export const SignIn = () => {
 
         <label>
           <div>
-            <input type="text" placeholder="Email"/>
+            <input className='input' type="text" placeholder="Email"/>
           </div>
 
           <div className='passwordSection'>
-            <input type="password" placeholder="Password"/>
+            <input className='input' type="password" placeholder="Password"/>
             <a href="#">Forgot your password?</a>
           </div>
         </label>
