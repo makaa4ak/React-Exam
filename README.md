@@ -14,4 +14,4 @@ Header - Kalanzhova\
 VideoPreview - Kalanzhova\
 OtherVideos - Ganich\
 Comment - Ganich\
-ChannelInfo - Babich\
+ChannelInfo - Babich

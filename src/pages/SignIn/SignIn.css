@@ -1,0 +1,103 @@
+.page
+{
+  display: flex;
+  flex-direction: column;
+
+  font-family: Jura;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 96px;
+  text-align: left;  
+  background: radial-gradient(117.45% 428.74% at -15.57% -12.7%, #6486DB 0%, #000000 36.29%, #04080B 71.35%, #6486DB 100%);
+}
+
+.block
+{
+  width: 40%;
+  background-color: black;
+  margin-left: 20%;
+  border-radius: 10%;
+  padding: 20px;
+}
+
+h1
+{
+  color: white;
+  text-transform: uppercase;
+}
+
+span
+{
+  color: #6486DB;
+}
+
+input
+{
+  width: 100%;
+  padding: 20px 20px;
+  margin: 10px 0;
+  display: inline-block;
+  border: 2px solid white;
+  border-radius: 25px;
+  box-sizing: border-box;
+  background-color: black;
+  color: white;
+}
+
+input::placeholder 
+{
+  color: white;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.passwordSection
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.passwordSection > a
+{
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+
+  position: fixed;
+  color: white;
+  text-decoration: none;
+  padding-right: 20px;
+}
+
+.bottomSection
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logoSection > img
+{
+  padding: 0px 10px;
+}
+
+button
+{
+  width: 50%;
+  padding: 20px 30px 20px 30px;
+  gap: 0px;
+  opacity: 0px;
+  border-radius: 50px;
+  color: white;
+  background-color: #6486DB;
+}
+button p
+{
+  font-family: Jura;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: center;
+}
