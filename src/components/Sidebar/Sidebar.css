@@ -22,24 +22,7 @@
 .sidenav a:hover {
     color: #f1f1f1;
 }
-/* 
-.sidenav--main
-{
-    border: 1px solid red;
-    width: 230px;
-    height: auto ;
-    background-color: beige;
-    box-sizing: border-box;
 
-}
-.sidenav--main .section
-{
-    border: 1px solid blue;
-}
-.section
-{
-    height: auto;
-} */
 .sidenav--main {
     border: 2px solid red;
     max-height: calc(100%);
