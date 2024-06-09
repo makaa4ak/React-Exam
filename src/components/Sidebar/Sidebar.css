@@ -12,14 +12,9 @@
     flex-direction: column;
     box-sizing: border-box;
 }
-.sidenav a {
-    text-decoration: none;
-    font-size: 1em;
-    color: #818181;
-    display: block;
-}
 
-.sidenav a:hover {
+
+.sidenav p:hover {
     color: #f1f1f1;
 }
 
@@ -47,4 +42,63 @@
 .sidenav--main .section
 {
     border: 1px solid blue;
+    width: 80%;
+    border-bottom: 1px solid white;
 }
+.sidenav--subscriptions {
+    width: 100%;
+    background-color: rgb(0, 0, 77);
+    height: 337px;
+    overflow: hidden;
+    transition: height 0.3s ease;
+  }
+  .sidenav--subscriptions.expanded {
+    height: auto;
+  }
+  
+.sidenav--item
+{
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    /* border: 1px solid green;    */
+    font-size: 1em; 
+    color: white;
+    margin-bottom: 8px;
+    cursor: pointer;
+    align-items: center;
+    padding-left: 10px;
+}
+.btn-show-more:hover,
+.sidenav--item:hover
+{
+    background-color: rgb(17, 17, 17);
+    border-radius: 50px;
+}
+.sidenav--item img
+{
+    margin-right: 10px;
+    width: 26px;
+    height: 26px;
+}
+.btn-toggle
+{
+    width: 100%;
+    outline: none;
+    background-color: initial;
+    border-radius: initial;
+    border: none;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+.btn-toggle img
+{
+    padding-left: 6px;
+}
+.toggle-icon.rotated {
+    transform: rotate(180deg);
+  }

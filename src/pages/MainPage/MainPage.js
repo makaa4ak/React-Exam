@@ -17,6 +17,7 @@ export default function MainPage()
       <Sidebar></Sidebar>
       
       <div className="main">
+        <div className='banner'></div>
         <h2>Main-Content</h2>
         {renderParagraphs(paragraph, repeat)}
       </div>

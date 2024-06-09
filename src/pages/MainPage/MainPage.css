@@ -18,3 +18,13 @@
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
 }
+.banner
+{
+    width: 100%;
+    height: 500px;
+    background-color: gray;
+}
+.main h2
+{
+    color: white;
+}
