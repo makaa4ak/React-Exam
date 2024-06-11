@@ -28,34 +28,37 @@ export default function Sidebar() {
   };
 
   return (
-    <div className="sidenav">
-      <div className='sidenav--main'>
-        <div className='section'>
-          <div className={`sidenav--subscriptions ${isExpanded ? 'expanded' : ''}`}>
-            {renderPlaceholders(itemCount - 1)}
-            <div className='sidenav--item'>
-              <img src='./images/add-video.svg'/>
-              <p>Last item</p>
+    <div>
+      <div className="sidenav">
+        <div className='sidenav--main'>
+          <div className='section'>
+            <div className={`sidenav--subscriptions ${isExpanded ? 'expanded' : ''}`}>
+              {renderPlaceholders(itemCount - 1)}
+              <div className='sidenav--item'>
+                <img src='./images/add-video.svg'/>
+                <p>Last item</p>
+              </div>
             </div>
+            {itemCount > 7 && (
+              <button className='btn-toggle' onClick={handleShowMoreClick}>
+                {isExpanded ? 'Show less' : 'Show more'}
+                <img
+                  src='./images/expand_more.svg'
+                  className={`toggle-icon ${isExpanded ? 'rotated' : ''}`}
+                  alt="Toggle icon"
+                />
+              </button>
+            )}
           </div>
-          {itemCount > 7 && (
-            <button className='btn-toggle' onClick={handleShowMoreClick}>
-              {isExpanded ? 'Show less' : 'Show more'}
-              <img
-                src='./images/expand_more.svg'
-                className={`toggle-icon ${isExpanded ? 'rotated' : ''}`}
-                alt="Toggle icon"
-              />
-            </button>
-          )}
-        </div>
-        <div className='section'>
-          {renderPlaceholders(10)}
-        </div>
-        <div className='section'>
-          {renderPlaceholders(10)}
+          <div className='section'>
+            {renderPlaceholders(10)}
+          </div>
+          <div className='section'>
+            {renderPlaceholders(10)}
+          </div>
         </div>
       </div>
+      <div className='sidenav-spacer'></div>
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import './MainPage.css';
-import Header from '../../components/Header/Header';
-import Sidebar from '../../components/Sidebar/Sidebar';
+// import Header from '../../components/Header/Header';
+// import Sidebar from '../../components/Sidebar/Sidebar';
 export default function MainPage()
 {
   const paragraph = "Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.";
@@ -13,15 +13,20 @@ export default function MainPage()
 
   return(
     <div>
-      <Header></Header>
-      <Sidebar></Sidebar>
-      
-      <div className="main">
-        <div className='banner'></div>
-        <h2>Main-Content</h2>
-        {renderParagraphs(paragraph, repeat)}
-      </div>
-      
+      {/* <Header></Header>
+        <div className='container'>
+          <Sidebar></Sidebar> */}
+          <div className="main">
+            <div className='banner'>
+              <div className='banner-gradient-side'></div>
+              <div className='banner-gradient-bottom'></div>
+              {/* <img className='banner-img' src='./images/banner.jpg' alt='Banner'></img> */}
+            </div>
+            <div>Section</div>
+            <h2>Main-Content</h2>
+            {renderParagraphs(paragraph, repeat)}
+          </div>
+        {/* </div> */}
     </div>
   )
 }
