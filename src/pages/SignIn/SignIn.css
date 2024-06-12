@@ -1,23 +1,69 @@
 .page
 {
-  display: flex;
-  flex-direction: column;
+  position: relative;
+
+  width: 100%;
+  height: 100vh;
 
   font-family: Jura;
   font-size: 32px;
   font-weight: 400;
   line-height: 96px;
-  text-align: left;  
+
+  padding: 50px;
+
   background: radial-gradient(117.45% 428.74% at -15.57% -12.7%, #6486DB 0%, #000000 36.29%, #04080B 71.35%, #6486DB 100%);
+}
+
+.photos
+{
+  padding-left: 30%;
+  position: absolute;
+  z-index: 1;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+.photos img
+{
+  width: 400px;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 5px;
 }
 
 .block
 {
+  position: relative;
+  z-index: 2;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
   width: 40%;
+  height: 100%;
   background-color: black;
-  margin-left: 20%;
-  border-radius: 10%;
+  border-radius: 20px;
   padding: 20px;
+}
+
+p
+{
+  font-family: Jura;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: center;
+}
+
+.flex-center
+{
+  display: flex;
+  flex-direction: center;
+  justify-content: center;
 }
 
 h1
@@ -60,13 +106,13 @@ input::placeholder
   align-items: flex-end;
 }
 
-.passwordSection > a
+a
 {
   font-family: Inter;
   font-size: 16px;
   font-weight: 400;
 
-  position: fixed;
+  position: absolute;
   color: white;
   text-decoration: none;
   padding-right: 20px;

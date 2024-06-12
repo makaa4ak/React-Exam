@@ -5,6 +5,17 @@ export const SignIn = () => {
   return (
     <div className='page'>
 
+      <div className='photos'>
+        <img src='./images/SignPhoto1.png'/>
+        <img src='./images/SignPhoto2.png'/>
+        <img src='./images/SignPhoto3.png'/>
+        <img src='./images/SignPhoto4.png'/>
+        <img src='./images/SignPhoto5.png'/>
+        <img src='./images/SignPhoto6.png'/>
+        <img src='./images/SignPhoto7.png'/>
+        <img src='./images/SignPhoto1.png'/>
+      </div>
+
       <div className='block'>
         <div>
           <h1>
@@ -35,10 +46,10 @@ export const SignIn = () => {
           <button><p>Sign in</p></button>
         </div>
 
-        <div>
-          <a href="#">Create an account</a>
+        <div className='flex-center'>
+          <a href="#"><p>Create an account</p></a>
         </div>
-
+        <br/>
       </div>
 
     </div>
