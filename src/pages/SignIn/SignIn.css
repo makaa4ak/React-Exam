@@ -83,7 +83,7 @@ input::placeholder
   padding: 0px 10px;
 }
 
-button
+.sign-in-button
 {
   width: 50%;
   padding: 20px 30px 20px 30px;
@@ -93,7 +93,7 @@ button
   color: white;
   background-color: #6486DB;
 }
-button p
+.sign-in-button p
 {
   font-family: Jura;
   font-size: 20px;
