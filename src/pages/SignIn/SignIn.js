@@ -43,7 +43,7 @@ export const SignIn = () => {
             <img src='./images/icon-twitter.svg'/>
             <img src='./images/icon-apple.svg'/>
           </div>
-          <button><p>Sign in</p></button>
+          <button className='sign-in-button'><p>Sign in</p></button>
         </div>
 
         <div className='flex-center'>
