@@ -38,10 +38,10 @@
 {
     box-sizing: border-box;
 }
-.middle {
+.section.middle {
     justify-content: center;
 }
-.right {
+.section.right {
     justify-content: end;
     padding-right: 50px;
 }
@@ -51,7 +51,7 @@
         cursor: pointer;
     }
     
-.left {
+.section.left {
     justify-content: start;
     padding-left: 50px;
 }
