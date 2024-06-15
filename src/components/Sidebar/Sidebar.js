@@ -28,7 +28,7 @@ export default function Sidebar() {
   };
 
   return (
-    <div>
+    <div className='sidenav-component'>
       <div className="sidenav">
         <div className='sidenav--main'>
           <div className='section'>

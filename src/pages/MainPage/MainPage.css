@@ -135,3 +135,10 @@
 .slider::-webkit-scrollbar {
     display: none;
 }
+
+@media (max-width: 1000px) {
+    .main {
+      width: 100%;
+    }
+  }
+  
