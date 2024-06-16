@@ -146,7 +146,7 @@
         font-weight: 400;
     }
 
-.card {
+.cards {
     max-width: 100%;
     margin: 0 auto;
     display: grid;
@@ -155,7 +155,13 @@
     border-bottom: 1px solid rgb(94, 94, 94);
     margin-bottom: 30px;
 }
-
+.card {
+    background-color: rgb(53, 53, 53);
+    color: white;
+    height: 270px;
+    overflow: hidden;
+}
+   
 @media (max-width: 699px) {
 .cards { 
     grid-template-columns: repeat(1, 1fr); 

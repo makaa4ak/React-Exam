@@ -52,19 +52,19 @@ export default function MainPage() {
 
       <div className='card-section'>
         <h1>Top 10 on this week</h1>
-        <div className="card">
+        <div className="cards">
           {renderCards(4)}
         </div>
         <h1>Continue watching</h1> 
-        <div className="card">
+        <div className="cards">
           {renderCards(4)}
         </div>
         <h1>Popular</h1> 
-        <div className="card">
+        <div className="cards">
           {renderCards(8)}
         </div>
         <h1>All Video</h1> 
-        <div className="card">
+        <div className="cards">
           {renderCards(20)}
         </div>
       </div>
