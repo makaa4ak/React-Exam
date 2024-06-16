@@ -135,10 +135,47 @@
 .slider::-webkit-scrollbar {
     display: none;
 }
+.card-section
+{
+    padding: 30px;
+}
+    .card-section h1 {
+        color: white;
+        font-family: Jura;
+        font-size: 1.2em;
+        font-weight: 400;
+    }
 
-@media (max-width: 1000px) {
+.card {
+    max-width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 1rem;
+    padding: 20px 0px 20px;
+    border-bottom: 1px solid rgb(94, 94, 94);
+    margin-bottom: 30px;
+}
+
+@media (max-width: 699px) {
+.cards { 
+    grid-template-columns: repeat(1, 1fr); 
+}
+}
+    
+@media (min-width: 700px) and (max-width: 1299px) {
+.cards { 
+    grid-template-columns: repeat(2, 1fr); 
+}
+}
+@media (max-width: 1299px) {
     .main {
       width: 100%;
     }
   }
+  
+@media (min-width: 1300px) {
+.cards { 
+    grid-template-columns: repeat(4, 1fr); 
+}
+}
   

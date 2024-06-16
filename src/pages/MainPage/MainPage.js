@@ -11,12 +11,19 @@ export default function MainPage() {
   const renderParagraphs = (content, count) => {
     return Array.from({ length: count }, (_, index) => <p key={index}>{content}</p>);
   };
+  
+  const renderCards = (count) => {
+    return Array.from({ length: count }, (_, index) => (
+      <div key={index} className='card'>
+        <p>Card {index + 1}</p>
+      </div>
+    ));
+  }
 
   return(
     <div className="main">
       <div className='main--container'>
         <div className='banner'>
-          <div className=''></div>
           <div className='banner-gradient-side'></div>
           <div className='banner-gradient-bottom'></div>
         </div>
@@ -35,13 +42,33 @@ export default function MainPage() {
                   onClick={() => setActiveButton(index)}
                 >
                   <p>{chip}</p>
-                </button>
+                </button> 
               ))}
             </div>
             <div className='vertical-mid-hack'></div>
           </div>
         </div>
       </div>
+
+      <div className='card-section'>
+        <h1>Top 10 on this week</h1>
+        <div className="card">
+          {renderCards(4)}
+        </div>
+        <h1>Continue watching</h1> 
+        <div className="card">
+          {renderCards(4)}
+        </div>
+        <h1>Popular</h1> 
+        <div className="card">
+          {renderCards(8)}
+        </div>
+        <h1>All Video</h1> 
+        <div className="card">
+          {renderCards(20)}
+        </div>
+      </div>
+
       <div>Section</div>
       <h2>Main-Content</h2>
       {renderParagraphs(paragraph, repeat)}

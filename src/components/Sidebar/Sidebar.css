@@ -113,7 +113,7 @@
     transform: rotate(180deg);
   }
 
-@media (max-width: 999px) {
+@media (max-width: 1299px) {
     .sidenav-component {
       display: none;
     }
