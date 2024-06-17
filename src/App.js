@@ -8,18 +8,18 @@ import Header from './components/Header/Header';
 
 function App() {
   return (
-    // <div>
-    //     <SignIn></SignIn>
-    //     {/* <SignUp></SignUp> */}
-    // </div>
-
     <div>
-      <Header></Header>
-      <div className='container'>
-        <Sidebar></Sidebar>
-        <MainPage></MainPage>
-      </div>
+        <SignIn></SignIn>
+        {/* <SignUp></SignUp> */}
     </div>
+
+    // <div>
+    //   <Header></Header>
+    //   <div className='container'>
+    //     <Sidebar></Sidebar>
+    //     <MainPage></MainPage>
+    //   </div>
+    // </div>
   );
 }
 
