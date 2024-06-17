@@ -68,10 +68,6 @@ export default function MainPage() {
           {renderCards(20)}
         </div>
       </div>
-
-      <div>Section</div>
-      <h2>Main-Content</h2>
-      {renderParagraphs(paragraph, repeat)}
     </div>
   )
 }
