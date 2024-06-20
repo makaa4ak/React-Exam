@@ -22,10 +22,10 @@ export default function SignIn()
 
       <div className='block'>
         <div>
-          <h1>
+          <h1 className='mainText'>
             get some<br />
             felicity<br />
-            with <span>amtlis</span><br />
+            with <span className='specialText'>amtlis</span><br />
           </h1>
         </div>
 
@@ -36,7 +36,7 @@ export default function SignIn()
 
           <div className='passwordSection'>
             <input className='input' type="password" placeholder="Password"/>
-            <a href="#">Forgot your password?</a>
+            <a className="link" href="#">Forgot your password?</a>
           </div>
         </label>
 
@@ -47,11 +47,11 @@ export default function SignIn()
             <img src='./images/sign-page/icon-twitter.svg'/>
             <img src='./images/sign-page/icon-apple.svg'/>
           </div>
-          <button className='sign-in-button'><p>Sign in</p></button>
+          <button className='sign-in-button'><p className='text'>Sign in</p></button>
         </div>
 
         <div className='flex-center'>
-          <a href="#"><p>Create an account</p></a>
+          <a className="link" href="#"><p className='text'>Create an account</p></a>
         </div>
         <br/>
       </div>

@@ -26,7 +26,7 @@ export default function SignUp()
         </div>
 
         <div>
-          <h1>
+          <h1 className='mainText'>
             Create<br />
             an account
           </h1>
@@ -51,11 +51,11 @@ export default function SignUp()
             <img src='./images/sign-page/icon-twitter.svg'/>
             <img src='./images/sign-page/icon-apple.svg'/>
           </div>
-          <button className='log-in-button'><p>Log In</p></button>
+          <button className='log-in-button'><p className='text'>Log In</p></button>
         </div>
 
         <div className='flex-center'>
-          <a href="#"><p>Welcome to AMTLIS</p></a>
+          <a href="#" className='link'><p className='text'>Welcome to AMTLIS</p></a>
         </div>
         <br/>
       </div>

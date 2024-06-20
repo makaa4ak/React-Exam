@@ -47,7 +47,7 @@
   padding: 20px;
 }
 
-p
+.text
 {
   font-family: Jura;
   font-size: 20px;
@@ -63,13 +63,13 @@ p
   justify-content: center;
 }
 
-h1
+.mainText
 {
   color: white;
   text-transform: uppercase;
 }
 
-span
+.specialText
 {
   color: #6486DB;
 }
@@ -103,7 +103,7 @@ input::placeholder
   align-items: flex-end;
 }
 
-a
+.link
 {
   font-family: Inter;
   font-size: 16px;
