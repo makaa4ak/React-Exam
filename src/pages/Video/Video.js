@@ -102,21 +102,11 @@ const VideoPage = () => {
 
   return (
     <div className="video-page">
-      <aside className="sidebar">
-        <h2>Subscriptions</h2>
-        <ul>
-          <li>Eneleo</li>
-          <li>Eva</li>
-          <li>Kovinka</li>
-          <li>Rob Scallon</li>
-          <li>Nikolai Chaze</li>
-          <li>Show more</li>
-        </ul>
-      </aside>
       <main className="main-content">
         <div className="video-container">
           <div id={`player-${video.id}`} className="video-frame"></div>
         </div>
+
         <div className="video-info">
           <h1>{video.title}</h1>
           <p>{video.views} • {video.date}</p>
@@ -127,6 +117,7 @@ const VideoPage = () => {
             <button>Add to playlist</button>
           </div>
         </div>
+
         <div className="comments-section">
           <h2>Comments</h2>
           <div className="comment">
@@ -137,6 +128,7 @@ const VideoPage = () => {
           </div>
         </div>
       </main>
+
       <aside className="recommended-videos">
         <h2>Recommended</h2>
         <ul>
@@ -151,6 +143,7 @@ const VideoPage = () => {
           ))}
         </ul>
       </aside>
+      
     </div>
   );
 }

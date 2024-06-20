@@ -9,13 +9,11 @@ import MainPage from './pages/MainPage/MainPage';
 import Sidebar from './components/Sidebar/Sidebar';
 import Header from './components/Header/Header';
 
-import Videopage from './pages/Video/Video';
+import VideoPage from './pages/Video/Video';
 
 function App() {
   return (
-    <Router>
-    <Videopage />
-  </Router>
+    // <div>
     //     <SignIn></SignIn>
     //     {/* <SignUp></SignUp> */}
     // </div>
@@ -27,6 +25,14 @@ function App() {
     //     <MainPage></MainPage>
     //   </div>
     // </div>
+
+    <Router>
+      <Header></Header>
+      <div className='container'>
+        <Sidebar></Sidebar>
+        <VideoPage/>
+      </div>
+    </Router>
   );
 }
 
