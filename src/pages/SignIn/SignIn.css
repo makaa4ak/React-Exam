@@ -135,6 +135,7 @@ input::placeholder
   border-radius: 50px;
   color: white;
   background-color: #6486DB;
+  border: none;
 }
 .sign-in-button p
 {

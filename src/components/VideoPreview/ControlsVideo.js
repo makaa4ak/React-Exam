@@ -1,0 +1,115 @@
+import React from "react";
+import './VideoPreview.css';
+
+const ControlsVideo = ({
+  handlePlay, 
+  handleVolume,
+  handleProgressControls,
+  handleFullScreen,
+  handleMouseEnter,
+  handleMouseLeave,
+  volume,
+  playedSeconds,
+  loadedSeconds,
+  showVolumeSlider,
+  playing
+}) => {
+  let playedLenght = Math.floor(playedSeconds);
+  let playedMin = Math.floor(playedLenght/60);
+  let playedSec = Math.floor(playedLenght%60);
+
+  let loadedLenght = Math.floor(loadedSeconds);
+  let loadedMin = Math.floor(loadedLenght/60);
+  let loadedSec = Math.floor(loadedLenght%60);
+
+
+  const checkNumber = (num) => 
+  {
+    if(num < 10)
+    {
+      return "0" + num;
+    }
+    else return num;
+  } 
+
+  const getPercentage = () => {
+    return (playedSeconds / loadedSeconds ) * 100;
+  };
+
+  return(
+    <>
+      <div 
+        className="videoControlsPlay"
+        onClick={handlePlay}
+        onDoubleClick={handleFullScreen}
+        >
+        <img style={{display: !playing ? 'block': 'none'}} src="./images/video-player/play_circle.svg"/>
+      </div>
+
+      <div className="videoControls">
+        <div>
+          <div className="range-background">
+            <div 
+              className="range-progress" 
+              style={{ width: `${getPercentage()}%` }}
+            ></div>
+          </div>
+
+          <input
+            type="range" 
+            className="videoControlsProgress"
+            value={playedSeconds}
+            min="0"
+            max={loadedSeconds}
+            step="1"
+            onChange={(e) => handleProgressControls(e.target.value)}
+          />
+
+        </div>
+
+        <div className="videoButtons">
+          <div className="videoButtons-part">
+            <img className="icon" src="./images/video-player/skip_previous.svg"/>
+
+            <img onClick={handlePlay} className="icon" src={!playing ? './images/video-player/play_arrow.svg' : './images/video-player/pause_circle.svg'}/>
+
+            <img className="icon" src="./images/video-player/skip_next.svg"/>
+
+            <div
+              className="videoVolume"
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+              >
+              <img className="icon" src="./images/video-player/primary-stroke.svg"/>
+
+              {showVolumeSlider ? (
+                <input type="range"
+                  value={volume}
+                  min="0"
+                  max="1"
+                  step="0.01"
+                  onChange={handleVolume}
+                />
+              ) : (
+                <img className="icon" src="./images/video-player/tertiary-stroke.svg"/>
+              )}
+
+            </div>
+
+            <p className="player-lenght">{checkNumber(playedMin)}:{checkNumber(playedSec)}/{checkNumber(loadedMin)}:{checkNumber(loadedSec)}</p>
+          </div>
+
+          <div className="videoButtons-part">
+            <img className="icon" src="./images/video-player/setting.svg"/>
+
+            <img className="icon" src="./images/video-player/subtitles.svg"/>
+
+            <img onClick={handleFullScreen} src="./images/video-player/fullscreen.svg"/>
+          </div>
+        </div>
+      </div>
+    </>
+  )
+}
+
+export default ControlsVideo

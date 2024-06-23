@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import VideoPreview from '../../components/VideoPreview/VideoPreview';
 import './Video.css';
 
 const videos = [
@@ -104,7 +105,9 @@ const VideoPage = () => {
     <div className="video-page">
       <main className="main-content">
         <div className="video-container">
-          <div id={`player-${video.id}`} className="video-frame"></div>
+          <VideoPreview id={`player-${video.id}`}/>
+
+          {/* <div id={`player-${video.id}`} className="video-frame"></div> */}
         </div>
 
         <div className="video-info">
