@@ -22,7 +22,6 @@ function App() {
     //   <Header></Header>
     //   <div className='container'>
     //     <Sidebar></Sidebar>
-    //     <MainPage></MainPage>
     //   </div>
     // </div>
 
@@ -30,7 +29,8 @@ function App() {
       <Header></Header>
       <div className='container'>
         <Sidebar></Sidebar>
-        <VideoPage/>
+        <MainPage></MainPage>
+        {/* <VideoPage/> */}
       </div>
     </Router>
   );

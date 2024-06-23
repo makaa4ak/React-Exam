@@ -1,45 +1,55 @@
 import React, { useState, useEffect } from 'react';
 import './Sidebar.css';
+import sidebarSections from './SidebarSections';
 
-const subscriptions = [
-  {name: 'ENLEO', img: './images/profile-pictures/enleo.png'},
-  {name: 'Eve', img: './images/profile-pictures/eve.png'},
-  {name: 'Копійка', img: './images/profile-pictures/kopiyka.png'},
-  {name: 'Rob Scallon', img: './images/profile-pictures/rob-scallon.png'},
-  {name: 'Nikolai Chaze', img: './images/profile-pictures/nikolay-chaze.png'},
-  {name: 'NEXPO', img: './images/profile-pictures/nexpo.jpg'},
-  {name: 'CreepCast', img: './images/profile-pictures/creepcast.png'},
-  {name: 'Nick Crowley', img: './images/profile-pictures/nick-crowley.jpg'},
-]
+const renderItems = (sections, isExpanded, handleShowMoreClick) => {
+  return sections.map((section, sectionIndex) => {
+    if (section.type === 'subscriptions') {
+      return (
+        <div className='section' key={sectionIndex}>
+          <h1 className='category-name'>Subscriptions</h1>
+          <div className={`sidenav--subscriptions ${isExpanded ? 'expanded' : ''}`}>
+            {section.items.map((item, itemIndex) => (
+              <div className='sidenav--item' key={itemIndex}>
+                <img className='avatar' src={item.img} alt={item.name} />
+                <p>{item.name}</p>
+              </div>
+            ))}
+          </div>
+          {section.items.length > 7 && (
+            <button className='btn-toggle' onClick={handleShowMoreClick}>
+              {isExpanded ? 'Show less' : 'Show more'}
+              <img
+                src='./images/expand_more.svg'
+                className={`toggle-icon ${isExpanded ? 'rotated' : ''}`}
+                alt="Toggle icon"
+              />
+            </button>
+          )}
+        </div>
+      );
+    }
 
-const sidebarItems = [
-  {name: 'Home', img: './images/sidebar-items/home.svg'},
-  {name: 'Playme', img: './images/sidebar-items/playme.svg'},
-  {name: 'Subscriptions', img: './images/sidebar-items/sub.svg'},
-
-]
-function renderPlaceholders() {
-  return sidebarItems.map((item, index) => (
-    <div key={index} className='sidenav--item'>
-      <img className='icon' src={item.img} alt={item.name}/>
-      <p>{item.name}</p>
-    </div>
-  ));
-}
-
-function renderSubscriptions() {
-  return subscriptions.map((subscription, index) => (
-    <div key={index} className='sidenav--item'>
-      <img className='avatar' src={subscription.img} alt={subscription.name}/>
-      <p>{subscription.name}</p>
-    </div>
-  ));}
-
+    const sectionImg = section.img;
+    return (
+      <div className='section' key={sectionIndex}>
+        {section.type === 'categories' && <h1 className='category-name'>Categories</h1>}
+        {section.items.map((item, itemIndex) => (
+          <div className={`sidenav--item ${section.type === 'categories' ? 'category-item' : ''}`} key={itemIndex}>
+            <img className={`icon ${section.type === 'categories' ? 'category' : ''}`} src={sectionImg || item.img} alt={item.alt} />
+            <p>{item.name}</p>
+          </div>
+        ))}
+      </div>
+    );
+  });
+};
 export default function Sidebar() {
   const [isExpanded, setIsExpanded] = useState(false);
 
   useEffect(() => {
-    if (subscriptions.length <= 7) {
+    const subscriptionSection = sidebarSections.find(section => section.type === 'subscriptions');
+    if (subscriptionSection && subscriptionSection.items.length <= 7) {
       setIsExpanded(true);
     }
   }, []);
@@ -52,36 +62,7 @@ export default function Sidebar() {
     <div className='sidenav-component'>
       <div className="sidenav">
         <div className='sidenav--main'>
-          <div className='section'>
-            {renderPlaceholders()}
-          </div>
-          <div className='section'>
-            {renderPlaceholders()}
-          </div>
-          <div className='section'>
-            <h1 className='category-name'>Subscriptions</h1>
-            <div className={`sidenav--subscriptions ${isExpanded ? 'expanded' : ''}`}>
-            {renderSubscriptions()}
-            </div>
-            {subscriptions.length > 7 && (
-              <button className='btn-toggle' onClick={handleShowMoreClick}>
-                {isExpanded ? 'Show less' : 'Show more'}
-                <img
-                  src='./images/expand_more.svg'
-                  className={`toggle-icon ${isExpanded ? 'rotated' : ''}`}
-                  alt="Toggle icon"
-                />
-              </button>
-            )}
-          </div>
-          <div className='section'>
-            <h1 className='category-name'>Categories</h1>
-            {renderPlaceholders()}
-          </div>
-          <div className='section'>
-            {renderPlaceholders()}
-          </div>
-
+          {renderItems(sidebarSections, isExpanded, handleShowMoreClick)}
         </div>
       </div>
       <div className='sidenav-spacer'></div>
