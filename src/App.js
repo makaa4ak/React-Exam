@@ -2,8 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 import './App.css';
-import SignIn from './pages/SignIn/SignIn'
-import SignUp from './pages/SignUp/SignUp'
+// import SignIn from './pages/SignIn/SignIn'
+// import SignUp from './pages/SignUp/SignUp'
 
 import MainPage from './pages/MainPage/MainPage';
 import Sidebar from './components/Sidebar/Sidebar';
