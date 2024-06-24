@@ -29,8 +29,8 @@ function App() {
       <Header></Header>
       <div className='container'>
         <Sidebar></Sidebar>
-        <MainPage></MainPage>
-        {/* <VideoPage/> */}
+        {/* <MainPage></MainPage> */}
+        <VideoPage/>
       </div>
     </Router>
   );

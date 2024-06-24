@@ -1,5 +1,6 @@
 import React from "react";
 import './VideoPreview.css';
+import VideoSettings from "./VideoSettings";
 
 const ControlsVideo = ({
   handlePlay, 
@@ -8,7 +9,11 @@ const ControlsVideo = ({
   handleFullScreen,
   handleMouseEnter,
   handleMouseLeave,
+  handleMuted,
+  handleShowSettings,
+  showSettings,
   volume,
+  muted,
   playedSeconds,
   loadedSeconds,
   showVolumeSlider,
@@ -43,7 +48,7 @@ const ControlsVideo = ({
         onClick={handlePlay}
         onDoubleClick={handleFullScreen}
         >
-        <img style={{display: !playing ? 'block': 'none'}} src="./images/video-player/play_circle.svg"/>
+        <img className="lock-select" style={{display: !playing ? 'block': 'none'}} src="./images/video-player/play_circle.svg"/>
       </div>
 
       <div className="videoControls">
@@ -71,7 +76,7 @@ const ControlsVideo = ({
           <div className="videoButtons-part">
             <img className="icon" src="./images/video-player/skip_previous.svg"/>
 
-            <img onClick={handlePlay} className="icon" src={!playing ? './images/video-player/play_arrow.svg' : './images/video-player/pause_circle.svg'}/>
+            <img onClick={handlePlay} className="icon" src={`./images/video-player/${playing ? 'pause_circle.svg' : 'play_arrow.svg'}`} />
 
             <img className="icon" src="./images/video-player/skip_next.svg"/>
 
@@ -80,19 +85,20 @@ const ControlsVideo = ({
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
               >
-              <img className="icon" src="./images/video-player/primary-stroke.svg"/>
+                <div className="flex-center" onClick={handleMuted} >
+                  <img className="icon" src="./images/video-player/primary-stroke.svg"/>
+                  <img className="icon" src={`./images/video-player/${(muted || volume == 0) ? 'none-stroke.svg' : 'volume-stroke.svg'}`}/>
+                </div>
 
               {showVolumeSlider ? (
                 <input type="range"
-                  value={volume}
+                  value={muted ? 0 : volume}
                   min="0"
                   max="1"
                   step="0.01"
                   onChange={handleVolume}
                 />
-              ) : (
-                <img className="icon" src="./images/video-player/tertiary-stroke.svg"/>
-              )}
+              ) : ''}
 
             </div>
 
@@ -100,7 +106,12 @@ const ControlsVideo = ({
           </div>
 
           <div className="videoButtons-part">
-            <img className="icon" src="./images/video-player/setting.svg"/>
+            <div className="flex-center">
+              <VideoSettings
+                showSettings={showSettings}
+              />
+              <img onClick={handleShowSettings} className="icon" src="./images/video-player/setting.svg"/>
+            </div>
 
             <img className="icon" src="./images/video-player/subtitles.svg"/>
 

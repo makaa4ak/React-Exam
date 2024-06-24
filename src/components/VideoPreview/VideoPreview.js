@@ -8,6 +8,8 @@ const VideoPreview = () =>
 {
   const [state, setState] = useState({
     playing: false,
+    muted: false,
+    showSettings: false,
     volume: 0.3,
     playedSeconds: 0,
     loadedSeconds: 1,
@@ -17,6 +19,8 @@ const VideoPreview = () =>
 
   const {
     playing,
+    muted,
+    showSettings,
     volume,
     playedSeconds,
     loadedSeconds,
@@ -33,6 +37,16 @@ const VideoPreview = () =>
 
   const handleVolume = (e) => {
     setState({...state, volume: e.target.value})
+    if(muted)
+      handleMuted();
+  }
+
+  const handleMuted = () => {
+    setState({...state, muted: !state.muted})
+  }
+
+  const handleShowSettings = () => {
+    setState({...state, showSettings: !state.showSettings})
   }
 
   const handlePlaybackRate = (e) => {
@@ -45,6 +59,9 @@ const VideoPreview = () =>
 
   const setDuration = (e) => {
     setState({...state, loadedSeconds: e})
+  }
+  const getLenghtVideo = () => {
+    setDuration(refPlayer.current.getDuration())
   }
 
   const handleProgress = (e) => {
@@ -69,17 +86,20 @@ const VideoPreview = () =>
   return (
     <div ref={refPlayerContainer}>
       <ReactPlayer
+        className="lock-select"
         url={video}
         controls={false}
         playing={playing}
+        muted={muted}
         width="100%"
         height="100%"
         volume={volume}
         ref={refPlayer}
+        progressInterval={100}
         onProgress={handleProgress}
         playbackRate={playbackRate}
-
-        onReady={ () => {setDuration(refPlayer.current.getDuration())}}
+        onEnded={handlePlay}
+        onReady={ getLenghtVideo }
 
         config={{
           youtube: {
@@ -102,8 +122,12 @@ const VideoPreview = () =>
         handleFullScreen={handleFullScreen}
         handleMouseEnter={handleMouseEnter}
         handleMouseLeave={handleMouseLeave}
+        handleMuted={handleMuted}
+        handleShowSettings={handleShowSettings}
 
         volume={volume}
+        muted={muted}
+        showSettings={showSettings}
         playing={playing}
         playedSeconds={playedSeconds}
         loadedSeconds={loadedSeconds}
