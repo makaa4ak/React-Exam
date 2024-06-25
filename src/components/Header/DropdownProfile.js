@@ -22,7 +22,8 @@ const dropdownSections = [
       {
         src: './images/header-images/dropdown-profile/supervisor_account.svg',
         text: 'Switch account',
-        arrow: true
+        arrow: true,
+        path: '/sign-in'
       },      
       {
         src: './images/header-images/dropdown-profile/domino_mask.svg',
@@ -87,4 +88,6 @@ const dropdownSections = [
     ]
   }
 ];
+
+
 export default dropdownSections;

@@ -5,10 +5,11 @@ const sidebarSections = [
       {
         name: 'Home', 
         img: './images/icons/home.svg',
+        path: '/'
       },
       {
         name: 'Playme', 
-        img: './images/icons/playme.svg'
+        img: './images/icons/playme.svg',
       },
       {
         name: 'Subscriptions', 
@@ -127,5 +128,7 @@ const sidebarSections = [
     ]
   },
 ];
+
+
 
 export default sidebarSections;

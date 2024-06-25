@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './Sidebar.css';
 import sidebarSections from './SidebarSections';
 
@@ -12,7 +13,13 @@ const renderItems = (sections, isExpanded, handleShowMoreClick) => {
             {section.items.map((item, itemIndex) => (
               <div className='sidenav--item' key={itemIndex}>
                 <img className='avatar' src={item.img} alt={item.name} />
-                <p>{item.name}</p>
+                <p>
+                  {item.path ? (
+                    <Link to={item.path}>{item.name}</Link>
+                  ) : (
+                    item.name
+                  )}
+                </p>
               </div>
             ))}
           </div>
@@ -37,7 +44,13 @@ const renderItems = (sections, isExpanded, handleShowMoreClick) => {
         {section.items.map((item, itemIndex) => (
           <div className={`sidenav--item ${section.type === 'categories' ? 'category-item' : ''}`} key={itemIndex}>
             <img className={`icon ${section.type === 'categories' ? 'category' : ''}`} src={sectionImg || item.img} alt={item.alt} />
-            <p>{item.name}</p>
+            <p>
+              {item.path ? (
+                <Link to={item.path}>{item.name}</Link>
+              ) : (
+                item.name
+              )}
+            </p>
           </div>
         ))}
       </div>

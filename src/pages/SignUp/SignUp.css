@@ -98,7 +98,7 @@
   border-radius: 0 25px 25px 0;
 }
 
-input::placeholder 
+.input::placeholder 
 {
   color: white;
   font-family: Inter;

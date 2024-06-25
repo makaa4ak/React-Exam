@@ -32,7 +32,7 @@ export default function MainPage() {
       <div className='horizontal-scroller'>
         <div className='gradient right'></div>
         <div className='gradient left'></div>
-        <div className='slider'>
+        <div className='chip-bar'>
           <div className='inner-box'>
             <div className='item-box'>
               {chipNames.map((chip, index) => (

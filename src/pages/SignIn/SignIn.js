@@ -1,6 +1,7 @@
 import './SignIn.css';
 import React from 'react';
 import PhotoSlider from '../../components/PhotoSlider/PhotoSlider';
+import { Link } from 'react-router-dom';
 
 export default function SignIn()
 {
@@ -51,7 +52,9 @@ export default function SignIn()
         </div>
 
         <div className='flex-center'>
-          <a className="link" href="#"><p className='text'>Create an account</p></a>
+          <Link to = '/sign-up'>
+            <a className="link" href="#"><p className='text'>Create an account</p></a>
+          </Link>
         </div>
         <br/>
       </div>

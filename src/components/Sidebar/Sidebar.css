@@ -8,11 +8,12 @@
     align-items: end;
     flex-direction: column;
     box-sizing: border-box;
+    margin-top: 96px;
 }
 .sidenav-spacer
 {
     height: 100vh;
-    background-color: red;
+    background-color: rgb(0, 0, 0);
 }
 .sidenav, .sidenav-spacer
 {
