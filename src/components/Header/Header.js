@@ -1,28 +1,46 @@
-import React, { useState, useEffect } from 'react'; 
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import './Header.css' 
+import './Header.css';
 import dropdownSections from './DropdownProfile';
 
 export default function Header() {
-  console.log(dropdownSections);
-
   const resizedLogoWidth = 950;
   const [isResized, setIsResized] = useState(window.innerWidth < resizedLogoWidth);
   const [isDropdownVisible, setIsDropdownVisible] = useState(false);
+  const [isSectionsVisible, setIsSectionsVisible] = useState(true);
+  const [isMiddleResized, setIsMiddleResized] = useState(false);
 
   useEffect(() => {
-      const handleResize = () => {
-          setIsResized(window.innerWidth < resizedLogoWidth);
-      };
-
-      window.addEventListener('resize', handleResize);
-      return () => window.removeEventListener('resize', handleResize);
+    const handleResize = () => {
+      const isCurrentlyResized = window.innerWidth < resizedLogoWidth;
+      setIsResized(isCurrentlyResized);
+  
+      if (!isCurrentlyResized) {
+        setIsSectionsVisible(true);
+        setIsMiddleResized(false);
+      }
+    };
+  
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
+  
 
   const toggleDropdown = () => {
-      setIsDropdownVisible(!isDropdownVisible);
+    setIsDropdownVisible(!isDropdownVisible);
   };
 
+  const toggleSections = () => {
+    if (isResized) {
+      setIsSectionsVisible(!isSectionsVisible);
+      setIsMiddleResized(!isMiddleResized);
+    }
+  };
+
+  const handleForwardClick = () => {
+    setIsMiddleResized(false);
+    setIsSectionsVisible(true);
+  };
   const renderItems = (sections) => {
     return sections.map((section, sectionIndex) => {
       if (section.type === 'profile') {
@@ -63,41 +81,59 @@ export default function Header() {
       );
     });
   };
-  return( 
-      <div> 
-          <div className='header'> 
-              <div className='section left'> 
-                  <img 
-                      className='logo' 
-                      src={isResized ? './images/header-images/logo-mobile.svg' : './images/header-images/logo.svg'} 
-                      alt='Logo' 
-                  />
-              </div> 
-              <div className='section middle'> 
-                  <div className='input-container'> 
-                      <img className='icon-search' src='./images/header-images/search.svg' alt='Mic'/> 
-                      <input className='input-search' type='text' name='search' placeholder="Search" />
-                  </div> 
-                  <img className='icon-mic' src='./images/header-images/mic.svg' alt='Mic'/> 
-              </div> 
-              <div className='section right'> 
-                  <img src='./images/header-images/add-video.svg' alt='Video'/> 
-                  <img src='./images/header-images/notification-alarm-bell_svgrepo.com.svg' alt='Bell'/> 
-                  <div className='dropdown'>
-                      <img 
-                          src='./images/header-images/acc.svg' 
-                          alt='Profile' 
-                          onClick={toggleDropdown}
-                      /> 
-                      <div className={`dropdown-content ${isDropdownVisible ? 'show' : ''}`}>
-                          <div>
-                              {renderItems(dropdownSections)}
-                          </div>
-                      </div>
-                  </div>
-              </div> 
-          </div> 
-          <div className='header-spacer'></div> 
-      </div> 
-  ); 
+
+  return (
+    <div>
+      <div className='header'>
+        {isSectionsVisible && (
+          <div className='section left'>
+            <img
+              className='logo'
+              src={isResized ? './images/header-images/logo-mobile.svg' : './images/header-images/logo.svg'}
+              alt='Logo'
+            />
+          </div>
+        )}
+        <div className={`section middle ${isMiddleResized ? 'resize' : ''}`}>
+          <div className='minimize-body' onClick={handleForwardClick}>
+            <img
+              src='./images/header-images/forward.svg'
+              alt='Video'
+              className='minimize-icon'
+            />
+          </div>
+          <div className='input-container'>
+            <img className='icon-search' src='./images/header-images/search.svg' alt='Mic' />
+            <input className={`input-search ${isMiddleResized ? 'resize' : ''}`} type='text' name='search' placeholder="Search" />
+          </div>
+          <img className='icon-mic' src='./images/header-images/mic.svg' alt='Mic' />
+        </div>
+        {isSectionsVisible && (
+          <div className='section right'>
+            <img
+              src='./images/header-images/search.svg'
+              className='toggle-search'
+              alt='Search'
+              onClick={toggleSections}
+            />
+            <img src='./images/header-images/add-video.svg' alt='Video' />
+            <img src='./images/header-images/notification-alarm-bell_svgrepo.com.svg' alt='Bell' />
+            <div className='dropdown'>
+              <img
+                src='./images/header-images/acc.svg'
+                alt='Profile'
+                onClick={toggleDropdown}
+              />
+              <div className={`dropdown-content ${isDropdownVisible ? 'show' : ''}`}>
+                <div>
+                    {renderItems(dropdownSections)}
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+      <div className='header-spacer'></div>
+    </div>
+  );
 }

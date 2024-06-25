@@ -33,12 +33,12 @@
 } 
 .section.middle { 
     justify-content: center; 
-    border: 1px solid violet; 
+    /* border: 1px solid violet;  */
 } 
 .section.right { 
     justify-content: end; 
     padding-right: 50px; 
-    border: 2px solid rgb(39, 151, 255); 
+    /* border: 2px solid rgb(39, 151, 255);  */
 } 
     .right img, .icon-mic, .logo 
     { 
@@ -47,7 +47,7 @@
     } 
      
 .section.left { 
-    border: 1px solid rgb(78, 161, 0); 
+    /* border: 1px solid rgb(78, 161, 0);  */
  
     justify-content: start; 
     padding-left: 50px; 
@@ -55,7 +55,7 @@
 .input-container 
 { 
     position: relative; 
-    border: 1px solid yellow; 
+    /* border: 1px solid yellow;  */
     display: flex; 
     align-items: center; 
     justify-content: end; 
@@ -162,10 +162,48 @@
 
 .show {display: block;}
 
+.toggle-search
+{
+    display: none;
+}
+.section.middle.resize
+{
+    /* background-color: red!important; */
+    display: flex!important;
+}
+.header .input-search.resize
+{
+    /* background-color: violet; */
+    width: 60vw!important;  
+}
+.minimize-body
+{
+    background-color: rgba(217, 217, 217, 0.12); 
+    width: 44px;
+    height: 44px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    cursor: pointer;
+    display: none;
+}
 @media (max-width: 950px) { 
-    .header .input-search { 
-        width: 40vw; 
-    } 
+    .section.middle
+    {
+        display: none;
+        /* background-color: blue; */
+    }
+    .minimize-body
+    {
+        display: flex;
+    }
+
+.toggle-search
+{
+    display: initial;
+}
 } 
 @media (max-width: 1299px) { 
     .section.right { 
