@@ -1,22 +1,20 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+
 import './MainPage.css';
 
 export default function MainPage() {
-  const paragraph = "Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.";
-  const repeat = 20;
   const chipNames = ['All', 'Music', 'Jams', 'Podcasts', 'Comedy', 'Live', 'Selena Gomez', 'Manga', 'Game Shows', 'Spiderman', 'Existential Dread', 'Horrors Beyond Comprehension']; 
 
   const [activeButton, setActiveButton] = useState(null);
 
-  const renderParagraphs = (content, count) => {
-    return Array.from({ length: count }, (_, index) => <p key={index}>{content}</p>);
-  };
-  
   const renderCards = (count) => {
     return Array.from({ length: count }, (_, index) => (
-      <div key={index} className='card'>
-        <p>Card {index + 1}</p>
-      </div>
+      <Link to='/video'>
+        <div key={index} className='card'>
+          <p>Card {index + 1}</p>
+        </div>
+      </Link>
     ));
   }
 

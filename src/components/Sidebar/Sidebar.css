@@ -8,7 +8,7 @@
     align-items: end;
     flex-direction: column;
     box-sizing: border-box;
-    margin-top: 96px;
+    /* margin-top: 96px; */
 }
 .sidenav-spacer
 {
@@ -18,7 +18,6 @@
 .sidenav, .sidenav-spacer
 {
     width: 320px;
-
 }
 .sidenav p:hover {
     color: #f1f1f1;

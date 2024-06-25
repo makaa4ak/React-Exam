@@ -19,6 +19,10 @@ const pages = [
     { 
         path: '/sign-up', 
         component: SignUp 
+    },
+    { 
+        path: '/video', 
+        component: VideoPage 
     }
 ]
 

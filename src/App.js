@@ -9,9 +9,7 @@ import Header from './components/Header/Header';
 function App() {
   return (
     <Router>
-      <div className='container'>
         <RouterApp />
-      </div>
     </Router>
   );
 }
@@ -27,12 +25,14 @@ function RouterApp()
   return (
     <>
       {showHeader && <Header />}
+      <div className='container'>
       {showNavbar && <Sidebar />}
       <Routes>
         {pages.map((page, index) => (
           <Route key={index} path={page.path} element={<page.component />} />
         ))}
       </Routes>
+      </div>
     </>
   );
 }

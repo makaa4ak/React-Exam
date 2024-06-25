@@ -8,6 +8,7 @@
 .main {
     background-color: black;
     width: calc(100% - 320px);
+    /* margin-top: 96px; */
 }
 
     .main p {
