@@ -171,15 +171,7 @@ const VideoPage = () => {
             </div>
 
         
-        <div className="comments-section">
-          <h2>Comments</h2>
-          <div className="comment">
-            <p><strong>Alina Rubek:</strong> Wow, this is amazing!</p>
-            <p className="replies">
-              <strong>Reply:</strong> Great cover!
-            </p>
-          </div>
-        </div>
+        
         <CommentList />
       </main>
 

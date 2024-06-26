@@ -1,13 +1,13 @@
 .comment-list {
-    max-width: 600px;
+    max-width: 70%;
     margin: 0 auto;
     text-align: left;
   }
   
-  .comment {
+  /* .comment {
     padding: 10px;
     border-bottom: 1px solid #ccc;
-  }
+  } */
   
   .comment-header {
     display: flex;
