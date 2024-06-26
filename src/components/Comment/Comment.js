@@ -11,8 +11,13 @@ const Comment = ({ comment }) => {
       </div>
       <div className="comment-body">{comment.text}</div>
       <div className="comment-actions">
-        <button>Reply</button>
-        <button>Like</button>
+        
+        <img src="/images/Comment/1.png" />
+        <img src="/images/Comment/2.png" />
+        <img src="/images/Comment/3.png" />
+        <img src="/images/Comment/4.png" />
+        <img src="/images/Comment/5.png" />
+        <button>Answer</button>
       </div>
     </div>
   );
