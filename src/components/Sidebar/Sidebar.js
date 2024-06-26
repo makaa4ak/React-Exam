@@ -2,8 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Sidebar.css';
 import sidebarSections from './SidebarSections';
+import NavbarMobile from '../NavbarMobile/NavbarMobile';
 
 const renderItems = (sections, isExpanded, handleShowMoreClick) => {
+
   return sections.map((section, sectionIndex) => {
     if (section.type === 'subscriptions') {
       return (
@@ -54,10 +56,11 @@ const renderItems = (sections, isExpanded, handleShowMoreClick) => {
           </div>
         ))}
       </div>
-    );
-  });
-};
-export default function Sidebar() {
+      );
+    });
+  };
+
+  export default function Sidebar() {
   const [isExpanded, setIsExpanded] = useState(false);
 
   useEffect(() => {
@@ -72,13 +75,16 @@ export default function Sidebar() {
   };
 
   return (
-    <div className='sidenav-component'>
-      <div className="sidenav">
-        <div className='sidenav--main'>
-          {renderItems(sidebarSections, isExpanded, handleShowMoreClick)}
+    <div>
+      <NavbarMobile/>
+      <div className='sidenav-component'>
+        <div className="sidenav">
+          <div className='sidenav--main'>
+            {renderItems(sidebarSections, isExpanded, handleShowMoreClick)}
+          </div>
         </div>
+        <div className='sidenav-spacer'></div>
       </div>
-      <div className='sidenav-spacer'></div>
     </div>
   );
 }

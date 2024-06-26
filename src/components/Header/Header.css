@@ -37,7 +37,7 @@
 } 
 .section.right { 
     justify-content: end; 
-    padding-right: 50px; 
+    margin-right: 50px; 
     /* border: 2px solid rgb(39, 151, 255);  */
 } 
     .right img, .icon-mic, .logo 
@@ -50,8 +50,9 @@
     /* border: 1px solid rgb(78, 161, 0);  */
  
     justify-content: start; 
-    padding-left: 50px; 
+    margin-left: 50px; 
 } 
+
 .input-container 
 { 
     position: relative; 
