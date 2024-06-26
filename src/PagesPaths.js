@@ -2,7 +2,7 @@ import MainPage from "./pages/MainPage/MainPage";
 import VideoPage from "./pages/Video/Video";
 import SignIn from "./pages/SignIn/SignIn";
 import SignUp from "./pages/SignUp/SignUp";
-
+import Subscriptions from "./pages/Subscriptions/Subscriptions";
 const pages = [
     { 
         path: '/', 
@@ -23,6 +23,10 @@ const pages = [
     { 
         path: '/video', 
         component: VideoPage 
+    },
+    { 
+        path: '/subscriptions', 
+        component: Subscriptions 
     }
 ]
 

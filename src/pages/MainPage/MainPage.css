@@ -159,12 +159,10 @@
 }
 
 .item-wrapper {
-    /* background-color: blue; */
     width: 100%;
 }
 
 .thumbnail {
-    /* background-color: gainsboro; */
     aspect-ratio: 16/9;
     object-fit: cover;
     width: 100%;
@@ -238,4 +236,4 @@ display: flex;
 .video-grid {
     grid-template-columns: repeat(1, 1fr);
 }
-}
+} 

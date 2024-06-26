@@ -44,21 +44,15 @@ const renderItems = (sections, isExpanded, handleShowMoreClick) => {
       <div className='section' key={sectionIndex}>
         {section.type === 'categories' && <h1 className='category-name'>Categories</h1>}
         {section.items.map((item, itemIndex) => (
-          <div className={`sidenav--item ${section.type === 'categories' ? 'category-item' : ''}`} key={itemIndex}>
+          <Link to={item.path} key={itemIndex} className={`sidenav--item ${section.type === 'categories' ? 'category-item' : ''}`}>
             <img className={`icon ${section.type === 'categories' ? 'category' : ''}`} src={sectionImg || item.img} alt={item.alt} />
-            <p>
-              {item.path ? (
-                <Link to={item.path}>{item.name}</Link>
-              ) : (
-                item.name
-              )}
-            </p>
-          </div>
+            <p>{item.name}</p>
+          </Link>
         ))}
       </div>
-      );
-    });
-  };
+    );
+  });
+};
 
   export default function Sidebar() {
   const [isExpanded, setIsExpanded] = useState(false);
