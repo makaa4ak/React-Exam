@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-
 import './MainPage.css';
+
 const videoData = [
   {
     src: "./images/previews/t1.png",
@@ -31,11 +31,12 @@ const videoData = [
     views: "12K views",
     date: "1 year ago",
   }
-
 ];
+
 const renderVideos = (videos) => {
   return videos.map((video, index) => (
     <Link to='/video'>
+      
     <div className='item-wrapper' key={index}>
       <img className='thumbnail' src={video.src} alt="Video thumbnail" />
       <div className='info-section'>

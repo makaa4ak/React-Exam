@@ -26,7 +26,6 @@
     max-height: calc(100%);
     overflow-y: scroll; 
     width: 80%;
-    border: 1px solid blue;
 }
 .sidenav--main::-webkit-scrollbar {
     width: 4px;
@@ -50,7 +49,6 @@
     margin-bottom: 10px;
     padding-bottom: 10px;
     padding-top: 10px;
-    border: 1px solid red;
 }
 .sidenav--main .section:last-child {
     border-bottom: none; 

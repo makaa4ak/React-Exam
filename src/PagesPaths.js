@@ -3,6 +3,8 @@ import VideoPage from "./pages/Video/Video";
 import SignIn from "./pages/SignIn/SignIn";
 import SignUp from "./pages/SignUp/SignUp";
 import Subscriptions from "./pages/Subscriptions/Subscriptions";
+import Channel from "./pages/Channel/Channel";
+
 const pages = [
     { 
         path: '/', 
@@ -27,6 +29,10 @@ const pages = [
     { 
         path: '/subscriptions', 
         component: Subscriptions 
+    },
+    { 
+        path: '/channel', 
+        component: Channel 
     }
 ]
 

@@ -17,7 +17,8 @@ const dropdownSections = [
       {
         src: './images/header-images/dropdown-profile/person.svg',
         text: 'Your channel',
-        arrow: false
+        arrow: false,
+        path: '/channel'
       },
       {
         src: './images/header-images/dropdown-profile/supervisor_account.svg',
