@@ -5,7 +5,7 @@ import pages from './PagesPaths';
 
 import Sidebar from './components/Sidebar/Sidebar';
 import Header from './components/Header/Header';
-
+// import NavbarMobile from './components/NavbarMobile/NavbarMobile';
 function App() {
   return (
     <Router>
