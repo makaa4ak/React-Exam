@@ -13,14 +13,14 @@
 }
 
 .subscriptions-grid .item-wrapper {
-    background-color: cadetblue;
+    /* background-color: cadetblue; */
     display: flex;
     width: 100%;
 }
 
 .picture-wrapper {
     object-fit: cover;
-    background-color: lightcoral;
+    /* background-color: lightcoral; */
     display: flex;
     align-items: center;
 
