@@ -8,7 +8,7 @@ export default function PhotoSlider({ sources })
   const randNum = Math.floor(Math.random() * (max - min + 1) + min);
   
   return (
-    <div className='.slider-row' style={{paddingLeft: randNum}}>
+    <div className='slider-row' style={{paddingLeft: randNum}}>
       {sources.map((source) => (
         <div>
           <img src={source}></img>
