@@ -87,11 +87,13 @@ export default function Header() {
       <div className='header'>
         {isSectionsVisible && (
           <div className='section left'>
-            <img
-              className='logo'
-              src={isResized ? './images/header-images/logo-mobile.svg' : './images/header-images/logo.svg'}
-              alt='Logo'
-            />
+            <Link to='/'>
+              <img
+                className='logo'
+                src={isResized ? './images/header-images/logo-mobile.svg' : './images/header-images/logo.svg'}
+                alt='Logo'
+              />
+            </Link>
           </div>
         )}
         <div className={`section middle ${isMiddleResized ? 'resize' : ''}`}>

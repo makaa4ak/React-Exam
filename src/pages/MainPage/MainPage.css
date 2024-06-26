@@ -136,54 +136,106 @@
 .chip-bar::-webkit-scrollbar {
     display: none;
 }
-.card-section
-{
-    padding: 10px 30px 0px;
-}
-    .card-section h1 {
-        color: white;
-        font-family: Jura;
-        font-size: 1.2em;
-        font-weight: 400;
-    }
 
-.cards {
-    max-width: 100%;
-    margin: 0 auto;
-    display: grid;
-    grid-gap: 1rem;
-    padding: 20px 0px 20px;
-    border-bottom: 1px solid rgb(94, 94, 94);
-    margin-bottom: 30px;
-    grid-template-columns:auto;
-}
-.card {
-    background-color: rgb(54, 54, 54);
-    color: white;
-    height: 270px;
-    overflow: hidden;
-}
-   
-@media (max-width: 699px) {
-.cards { 
-    grid-template-columns: repeat(1, 1fr); 
-}
-}
-    
-@media (min-width: 700px) and (max-width: 1299px) {
-.cards { 
-    grid-template-columns: repeat(2, 1fr); 
-}
-}
+
 @media (max-width: 900px) {
     .main {
-      width: 100%;
+        width: 100%;
     }
-  }
+}
+
+.grid-container {
+    width: 100%;
+    padding: 0 30px;
+}
+
+.video-grid {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(4, 1fr);
+    border-bottom: 1px solid rgb(73, 73, 73);
+    padding-bottom: 20px;
+    margin-bottom: 25px;
+}
+
+.item-wrapper {
+    /* background-color: blue; */
+    width: 100%;
+}
+
+.thumbnail {
+    /* background-color: gainsboro; */
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 10px;
+}
   
-@media (min-width: 1300px) {
-.cards { 
-    grid-template-columns: repeat(4, 1fr); 
+.profile-picture {
+    width: 45px;
+    height: 45px;
+    border-radius: 100px;
+    object-fit: cover;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+  
+.info-section {
+    display: flex;
+}
+  
+.text-section {
+    margin-bottom: 5px;
+    padding: 10px;
+    p
+    {
+        margin: 7px 0px 0px;
+    }
+    .video-name {
+        font-weight: 450;
+        font-size: 16px;
+        word-wrap: break-word;
+        color: white;
+    }
+    .channel-name, .video-info {
+        font-weight: 400;
+        font-size: 13px;
+        word-wrap: break-word;
+    }
+    .channel-name
+    {
+        color: white;
+    }
+    .video-info
+    {
+        color: gray;
+        margin-right: 10px;
+    }
+}
+.text-section .row {
+display: flex;
+}
+.section-name
+{
+    font-family: Jura;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 20px;
+
+}
+.section-grid:last-child .video-grid {
+    border-bottom: none;
+    padding-bottom: 0px;
+}
+
+@media (max-width: 1400px) {
+.video-grid {
+    grid-template-columns: repeat(2, 1fr);
 }
 }
-  
+
+@media (max-width: 900px) {
+.video-grid {
+    grid-template-columns: repeat(1, 1fr);
+}
+}
