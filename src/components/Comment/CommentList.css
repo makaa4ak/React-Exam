@@ -1,0 +1,44 @@
+.comment-list {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  
+  .comment {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .comment-header {
+    display: flex;
+    align-items: center;
+  }
+  
+  .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .comment-author {
+    font-weight: bold;
+  }
+  
+  .comment-time {
+    margin-left: auto;
+    color: #888;
+  }
+  
+  .comment-body {
+    margin-top: 10px;
+  }
+  
+  .comment-actions {
+    margin-top: 10px;
+  }
+  
+  .comment-actions button {
+    margin-right: 10px;
+  }
+ 

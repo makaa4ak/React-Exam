@@ -1,52 +1,27 @@
-.video-page
-{
+.video-page {
+  width: 100%;
+  
   display: flex;
   background-color: #000000;
   color: #ffffff;
   font-family: Arial, sans-serif;
 }
 
-.sidebar
-{
-  width: 15%;
-  padding: 20px;
-  background-color: #202020;
-}
-
-.sidebar h2,
-.sidebar ul
-{
-  margin: 0;
-  padding: 0;
-}
-
-.sidebar ul
-{
-  list-style-type: none;
-}
-
-.sidebar li
-{
-  margin: 10px 0;
-}
-
-.main-content
-{
-  width: 70%;
+.main-content {
+  width: 100%;
   padding: 20px;
 }
 
-.video-container
-{
+.video-container {
   position: relative;
   height: 60%;
+  width: 100%;
   overflow: hidden;
   max-width: 100%;
   background: #000;
 }
 
-.video-container iframe
-{
+.video-container .video-frame {
   position: absolute;
   top: 0;
   left: 0;
@@ -54,94 +29,162 @@
   height: 100%;
 }
 
-.video-info
-{
-  margin-top: 20px;
+
+.description {
+  width: 100%; /* Ширина блока description */
+  color: white;
+  padding: 20px;
+  background: linear-gradient(270.78deg, #090909 35.91%, #6486DB 254.73%);
+  border-radius: 10px; 
 }
 
-.video-info .actions
-{
+.description p {
+  margin-bottom: 10px; /* Отступ снизу абзаца */
+}
+
+.additional-info {
+  /* position: absolute; Абсолютное позиционирование внутри .description */
+  bottom: 10%; /* Располагаем блок снизу */
+  right: 30px; /* Располагаем блок справа */
   display: flex;
-  gap: 10px;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+padding-left: 80%;
 }
 
-.comments-section
-{
+.additional-info img {
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+}
+
+
+
+
+
+
+
+.comments-section {
   margin-top: 20px;
 }
 
-.comment
-{
-  background-color: #282828;
+.comment {
+  /* background-color: #282828; */
   padding: 10px;
   margin: 10px 0;
   border-radius: 5px;
 }
 
-.recommended-videos
-{
+.recommended-videos {
   width: 30%;
   height: 40%;
   padding: 20px;
-  /* background-color: #202020; */
   display: flex;
-  /* Размещаем элементы внутри .recommended-videos в строку */
   flex-direction: column;
-  /* Размещаем элементы в столбец */
   align-items: center;
-  /* Выравниваем по центру по горизонтали */
   margin-top: 20px;
-  /* Отступ сверху */
   border-radius: 10px;
   background: linear-gradient(180deg, #6486DB -19.87%, #090909 100%);
-
 }
 
 .recommended-videos h2,
-.recommended-videos ul
-{
+.recommended-videos ul {
   margin: 0;
   padding: 0;
 }
 
-.recommended-videos ul
-{
+.recommended-videos ul {
   list-style-type: none;
   width: 100%;
-  /* Ширина списка занимает 100% контейнера */
 }
 
-.recommended-videos li
-{
+.recommended-videos li {
   display: flex;
   align-items: center;
-  /* Выравниваем элементы по вертикали */
   margin-bottom: 10px;
-  /* Отступ снизу между элементами списка */
+  cursor: pointer;
 }
 
-.recommended-videos img
-{
+.recommended-videos img {
   height: 75px;
   width: auto;
   margin-right: 10px;
 }
 
-.video-info
-{
-  width: calc(70% - 40px);
-  /* Ширина блока с информацией о видео */
-  margin-left: 20px;
-  /* Отступ слева */
+.video-info h3 {
+  margin: 0;
 }
 
-.video-info h1
-{
-  margin-top: 0;
-}
-
-.video-info p
-{
-  margin-bottom: 5px;
+.video-info p {
+  margin: 0;
   color: #999;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+
+
+.author-section {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.author-img {
+  display: flex;
+  align-items: center;
+}
+
+.author-img img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.author-name {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.Subscribe {
+  width: 136px;
+  height: 39px;
+  padding: 10px 30px;
+  border-radius: 10px;
+  border: 1px solid #6486DB;
+  opacity: 1;
+  cursor: pointer;
+
+  margin-left: -10%; /* Сдвигаем кнопку влево на 10px */
+}
+
+.actions {
+  display: flex;
+  justify-content: center; /* Центрирование по горизонтали */
+  align-items: center; /* Центрирование по вертикали */
+  gap: 20px; /* Промежуток между элементами */
+}
+
+.action-item {
+  display: flex;
+  align-items: center; /* Центрирование содержимого по вертикали */
+  cursor: pointer; /* Показываем указатель при наведении */
+}
+
+.action-item img {
+  width: 24px; /* Размер иконки, настройте по необходимости */
+  height: 24px;
+  margin-right: 5px; /* Отступ справа от иконки */
+}
+
+.action-item p {
+  margin: 0px; /* Убираем внешние отступы у текста */
+  
 }
