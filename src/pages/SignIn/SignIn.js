@@ -43,19 +43,17 @@ export default function SignIn()
 
         <div className='bottomSection'>
           <div className='logoSection'>
-            <img src='./images/sign-page/icon-facebook.svg'/>
-            <img src='./images/sign-page/icon-google.svg'/>
-            <img src='./images/sign-page/icon-twitter.svg'/>
-            <img src='./images/sign-page/icon-apple.svg'/>
+            <a href=""><img src='./images/sign-page/icon-facebook.svg'/></a>
+            <a href=""><img src='./images/sign-page/icon-google.svg'/></a>
+            <a href=""><img src='./images/sign-page/icon-twitter.svg'/></a>
+            <a href=""><img src='./images/sign-page/icon-apple.svg'/></a>
           </div>
           <button className='sign-in-button'><p className='text'>Sign in</p></button>
         </div>
 
-        <div className='flex-center'>
-          <Link to = '/sign-up'>
+        <Link className='flex-center' to = '/sign-up'>
             <a className="link" href="#"><p className='text'>Create an account</p></a>
-          </Link>
-        </div>
+        </Link>
         <br/>
       </div>
 

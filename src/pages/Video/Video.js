@@ -120,8 +120,8 @@ const VideoPage = () => {
     <div className="video-page">
       <main className="main-content">
         <div className="video-container">
-          <div id={`player-${video.id}`} className="video-frame"></div>
-          {/* <VideoPreview id={`player-${video.id}`} /> */}
+          {/* <div id={`player-${video.id}`} className="video-frame"></div> */}
+          <VideoPreview urlVideo={'https://www.youtube.com/embed/icaSda6Rrrg'} />
         </div>
         <div className="video-title">
           <h1>{video.title}</h1>

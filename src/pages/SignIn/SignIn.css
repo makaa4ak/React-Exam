@@ -121,9 +121,15 @@
   justify-content: space-between;
   align-items: center;
 }
-.logoSection > img
+
+.logoSection
 {
-  padding: 0px 10px;
+  display: flex;
+  flex-direction: row;
+}
+.logoSection > a > img
+{
+  padding: 0px 5px;
 }
 
 .sign-in-button

@@ -4,7 +4,7 @@ import './VideoPreview.css';
 import ControlsVideo from './ControlsVideo';
 import screenfull from 'screenfull';
 
-const VideoPreview = () =>
+const VideoPreview = ( {urlVideo} ) =>
 {
   const [state, setState] = useState({
     playing: false,
@@ -80,14 +80,11 @@ const VideoPreview = () =>
     setState({...state, showVolumeSlider: false})
   };
 
-  const video = "https://youtu.be/dQw4w9WgXcQ"
-  // const video = "./secret_video_do_not_open.mp4"
-
   return (
-    <div ref={refPlayerContainer}>
+    <div className='videoPlayer' ref={refPlayerContainer}>
       <ReactPlayer
         className="lock-select"
-        url={video}
+        url={urlVideo}
         controls={false}
         playing={playing}
         muted={muted}
@@ -100,7 +97,7 @@ const VideoPreview = () =>
         playbackRate={playbackRate}
         onEnded={handlePlay}
         onReady={ getLenghtVideo }
-
+        
         config={{
           youtube: {
             playerVars: { 
