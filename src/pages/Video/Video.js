@@ -89,20 +89,20 @@ const VideoPage = () => {
     script.src = "https://www.youtube.com/iframe_api";
     document.body.appendChild(script);
   
-    script.onload = () => {
-      window.YT.ready(() => {
-        const player = new window.YT.Player(`player-${video.id}`, {
-          videoId: video.videoId,
-          events: {
-            'onReady': onPlayerReady,
-            'onStateChange': onPlayerStateChange
-          }
-        });
+    // script.onload = () => {
+    //   window.YT.ready(() => {
+    //     const player = new window.YT.Player(`player-${video.id}`, {
+    //       videoId: video.videoId,
+    //       events: {
+    //         'onReady': onPlayerReady,
+    //         'onStateChange': onPlayerStateChange
+    //       }
+    //     });
   
-        // Обновляем playerRef.current только после полной инициализации плеера
-        playerRef.current = player;
-      });
-    };
+    //     // Обновляем playerRef.current только после полной инициализации плеера
+    //     playerRef.current = player;
+    //   });
+    // };
   
     return () => {
       // Очищаем плеер при размонтировании компонента
@@ -112,35 +112,29 @@ const VideoPage = () => {
     };
   }, [video.id]);
   
-  useEffect(() => {
-    // Проверяем, что playerRef.current и loadVideoById доступны перед вызовом
-    if (playerRef.current && typeof playerRef.current.loadVideoById === 'function') {
-      playerRef.current.loadVideoById(video.videoId);
-    }
-  }, [video]);
-  const onPlayerReady = (event) => {
-    event.target.playVideo();
-  };
-
-  // const onPlayerStateChange = (event) => {
-  //   if (event.data === window.YT.PlayerState.ENDED) {
-  //     const nextVideoIndex = (videos.findIndex(v => v.id === video.id) + 1) % videos.length;
-  //     const nextVideo = videos[nextVideoIndex];
-  //     navigate(`/video/${nextVideo.id}`);
+  // useEffect(() => {
+  //   // Проверяем, что playerRef.current и loadVideoById доступны перед вызовом
+  //   if (playerRef.current && typeof playerRef.current.loadVideoById === 'function') {
+  //     playerRef.current.loadVideoById(video.videoId);
   //   }
+  // }, [video]);
+  // const onPlayerReady = (event) => {
+  //   event.target.playVideo();
   // };
 
-  const onPlayerStateChange = (event) => {
-    if (event.data === window.YT.PlayerState.ENDED) {
-      const nextVideoIndex = (videos.findIndex(v => v.id === video.id) + 1) % videos.length;
-      const nextVideo = videos[nextVideoIndex];
-      navigate(`/video/${nextVideo.id}`);
-    }
-  };
+ 
+
 
   const handleRecommendationClick = (id) => {
-    navigate(`/video/${id}`);
+    const selectedVideo = videos.find(video => video.id === id);
+    if (selectedVideo) {
+      setVideo(selectedVideo);
+      navigate(`/video/${id}`);
+    } else {
+      console.error(`Video with id ${id} not found`);
+    }
   };
+  
 
   if (!video) {
     return <div>Video not found</div>;
@@ -176,7 +170,7 @@ const VideoPage = () => {
     <div className="video-page">
       <main className="main-content">
         <div className="video-container">
-          {/* <div id={`player-${video.id}`} className="video-frame"></div> */}
+
           <VideoPreview urlVideo={'https://www.youtube.com/embed/icaSda6Rrrg'} />
         </div>
         <div className="video-title">
