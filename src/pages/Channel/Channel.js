@@ -42,16 +42,6 @@ const chipNames = [
     'Community',
     'About']; 
 
-function renderCategories(categories) {
-    return categories.map((category, index) => (
-        <div key={index} className='category'>
-            <div className='category-container'>
-                <p>{category}</p>
-            </div>
-        </div>
-    ));
-}
-
   const renderVideos = (videos) => {
     return videos.map((video, index) => (
       <Link to='/video'>
@@ -85,13 +75,16 @@ export default function Channel()
                 <div className='banner-profile-section '>
                     <img className='profile-picture' src='./images/header-images/acc.svg'></img>
                     <div>
-                        <h1 className='channel-name'>LiLia Hmel</h1>
+                        <h1 className='my-channel-name'>LiLia Hmel</h1>
                         <div className='row-section'>
                             <p className='user-name'>@kltrons</p>
                             <p className='subscribers'>300 subscribers</p>
                         </div>
                         <div className='button-row'>
-                            <button className='btn-control'>Video Control</button>
+                          <div>
+                          <button className='btn-control'>Video Control</button>
+
+                          </div>
                             <div className='row'>
                               <img className='icon' src='/images/icons/bar_chart.svg'/>
                               <img className='icon'  src='/images/icons/heart.svg'/>
