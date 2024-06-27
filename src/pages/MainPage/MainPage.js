@@ -67,7 +67,7 @@ export default function MainPage() {
           <div className='banner-contents'>
             <div className='banner-text-container'>
               <h1 className='banner-text'>ВЕДИ МЕНЕ В ХРАМ</h1>
-              <h1 className='banner-text grey'>(TAKE ME TO CHURCH УКРАЇНСЬКОЮ)</h1>
+              <h1 className='grey-text banner-text'>(TAKE ME TO CHURCH УКРАЇНСЬКОЮ)</h1>
             </div>
             <div className='banner-items'>
               <div className='banner-wrapper'>

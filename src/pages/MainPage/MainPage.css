@@ -36,6 +36,7 @@
 .banner-text-container
 {
     height: 50%;
+
 }
     .banner-contents
     {
@@ -51,7 +52,7 @@
         font-size: 40px;
         font-weight: 500;
     }
-    .banner-text.grey
+    .banner-text.grey-text
     {
         color: gray;
     }
@@ -355,5 +356,30 @@ display: flex;
     .grid-container
     {
         margin-bottom: 85px;
+    }
+    .banner
+    {
+    background-position: center;  
+    }
+    .grey-text
+    {
+        display: none;
+    }
+    .banner-text-container
+    {
+        display: flex;
+        justify-content: center;
+    }
+    .banner-gradient-side
+    {
+        display: none;
+    }
+    .main--container
+    {
+        padding-right: 30px;
+    }
+    .banner
+    {
+        border-radius: 10px;
     }
 }
