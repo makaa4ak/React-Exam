@@ -46,10 +46,10 @@ export default function SignUp()
 
         <div className='bottomSection'>
           <div className='logoSection'>
-            <img src='./images/sign-page/icon-facebook.svg'/>
-            <img src='./images/sign-page/icon-google.svg'/>
-            <img src='./images/sign-page/icon-twitter.svg'/>
-            <img src='./images/sign-page/icon-apple.svg'/>
+            <a href=""><img src='./images/sign-page/icon-facebook.svg'/></a>
+            <a href=""><img src='./images/sign-page/icon-google.svg'/></a>
+            <a href=""><img src='./images/sign-page/icon-twitter.svg'/></a>
+            <a href=""><img src='./images/sign-page/icon-apple.svg'/></a>
           </div>
           <button className='log-in-button'><p className='text'>Log In</p></button>
         </div>

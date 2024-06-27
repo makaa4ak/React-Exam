@@ -124,9 +124,15 @@
   justify-content: space-between;
   align-items: center;
 }
-.logoSection > img
+
+.logoSection
 {
-  padding: 0px 10px;
+  display: flex;
+  flex-direction: row;
+}
+.logoSection > a > img
+{
+  padding: 0px 5px;
 }
 
 .log-in-button
@@ -136,6 +142,7 @@
   border-radius: 50px;
   color: white;
   background-color: #6486DB;
+  border: none;
 }
 .log-in-button p
 {

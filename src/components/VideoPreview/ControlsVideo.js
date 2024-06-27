@@ -27,7 +27,6 @@ const ControlsVideo = ({
   let loadedMin = Math.floor(loadedLenght/60);
   let loadedSec = Math.floor(loadedLenght%60);
 
-
   const checkNumber = (num) => 
   {
     if(num < 10)
