@@ -5,40 +5,39 @@ import { Link } from 'react-router-dom';
 const videoData = [
     {
       src: "./images/previews/t1.png",
-      name: "Name name name",
+      name: "@name",
       channel: "SKVOT",
-      views: "12K views",
+      views: "12,9k subscribers",
       date: "1 year ago",
     },
     {
       src: "./images/previews/t2.png",
-      name: "Name",
+      name: "@name",
       channel: "Universal Pictures",
-      views: "12K views",
+      views: "12,9k subscribers",
       date: "1 year ago",
     },
     {
       src: "./images/previews/t3.png",
-      name: "Name",
+      name: "@name",
       channel: "St3inway",
-      views: "12K views",
+      views: "12,9k subscribers",
       date: "1 year ago",
     },
     {
       src: "./images/previews/t4.png",
-      name: "Name",
+      name: "@name",
       channel: "St3inway",
-      views: "12K views",
+      views: "12,9k subscribers",
       date: "1 year ago",
     },
     {
-        src: "./images/previews/t4.png",
-        name: "Name",
-        channel: "St3inway",
-        views: "12K views",
-        date: "1 year ago",
-      }
-  
+      src: "./images/previews/t4.png",
+      name: "@name",
+      channel: "St3inway",
+      views: "12,9k subscribers",
+      date: "1 year ago",
+    }
   ];
   
   const renderVideos = (videos) => {
@@ -48,8 +47,8 @@ const videoData = [
             <img className='picture' src={video.src}></img>
         </div>
         <div className='text-section sub'>
-            <p className='sub-channel-name'>{video.name}</p>
-            <p className='user-name'>{video.channel}</p>
+            <p className='sub-channel-name'>{video.channel}</p>
+            <p className='user-name'>{video.name}</p>
             <p className='subscribers'>{video.views}</p>
         </div>
       </div>
