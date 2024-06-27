@@ -237,4 +237,8 @@ display: flex;
     .main {
         width: 100%;
     }
+    .grid-container
+    {
+        margin-bottom: 85px;
+    }
 }
