@@ -25,7 +25,9 @@
 .sidenav--main {
     max-height: calc(100%);
     overflow-y: scroll; 
-    width: 80%;
+    padding-left: 40px;
+    width: 100%;
+    /* border: 1px solid blue; */
 }
 .sidenav--main::-webkit-scrollbar {
     width: 4px;

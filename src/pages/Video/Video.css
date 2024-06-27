@@ -70,7 +70,6 @@ padding-left: 80%;
 }
 
 .comment {
-  /* background-color: #282828; */
   padding: 10px;
   margin: 10px 0;
   border-radius: 5px;
@@ -187,4 +186,90 @@ body {
 .action-item p {
   margin: 0px; /* Убираем внешние отступы у текста */
   
+}
+
+
+
+
+
+
+
+
+.comment-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Jura', sans-serif;
+}
+
+.comment-profile {
+  font-size: 18px; 
+  margin: 10px 0;  
+  padding: 10px;  
+  color: white;
+}
+
+.comment-container {
+  display: flex;
+  align-items: center;
+  background-color: black;
+  padding: 10px;
+  border-radius: 5px;
+  width: 90%;
+  color: white;
+  margin-top: 10px;
+}
+
+.profile-pic {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.comment-input {
+  flex: 1;
+  background: none;
+  border: none;
+  border-bottom: 1px solid white;
+  outline: none;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon-smile, .icon-at, .icon-send {
+  cursor: pointer;
+}
+/* <div className="description"> */
+
+.description{
+  margin-bottom: 20px ;
+}
+
+
+
+
+
+@media (max-width: 1400px) {
+  .recommended-videos {
+      display: none;
+  }
+  .video-container{
+    height: 40%;
+  }
+}
+
+
+@media (max-width: 1000px) {
+
+  .video-container{
+    height: 20%;
+  }
 }

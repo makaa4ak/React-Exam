@@ -70,7 +70,7 @@ export default function Header() {
             } else {
               return (
                 <div className='dropdown-item' key={itemIndex}>
-                  <img src={item.src} alt={item.alt} />
+                  <img className='pfp' src={item.src} alt={item.alt} />
                   <p>{item.text}</p>
                   {item.arrow && <img className='arrow' src='./images/header-images/arrow_forward_ios.svg' alt='Arrow' />}
                 </div>
@@ -127,11 +127,9 @@ export default function Header() {
                 onClick={toggleDropdown}
               />
               <div className={`dropdown-content ${isDropdownVisible ? 'show' : ''}`}>
-                <div className='dropdown-content-scroll'>
                   <div>
                       {renderItems(dropdownSections)}
                   </div>
-                </div>
               </div>
             </div>
           </div>

@@ -10,7 +10,6 @@
     width: 100%;
     background-color: rgb(139, 139, 139);
     overflow: hidden;
-    height: 100%;
     position: relative;
     height: 300px;
     display: inline-block;
@@ -27,8 +26,8 @@
     }
     .profile-picture
     {
-        height: 149px;
-        width: 149px;
+        height: 120px;
+        width: 120px;
     }
 }
 .banner-profile-section 
@@ -50,11 +49,11 @@
     font-size: 16px;
     border: none;
     cursor: pointer;
+    margin-right: 10px;
 }
 .user-name, .subscribers
 {
     color: #ACACAC;
-    
 }
 
 .channel * .icon
@@ -63,14 +62,19 @@
     width: 26px;
     cursor: pointer;
 }
-.row-section
+.row-section, .button-row
 {
     display: flex;
     align-items: center;
     padding: 10px 0px 0px;
+
+    p {
+        margin-right: 10px
+    };
 }
-.row-section > *
+.button-row .row > *
 {
+    margin-top: 10px;
     margin-right: 15px;
 }
 .channel-name
@@ -102,9 +106,34 @@
     display: inline-block;  
     text-align: center;
     font-size: 1em;
+    border: 1px solid black;
 }
 @media (max-width: 900px) {
     .channel {
         width: 100%;
+    }
+    .button-row
+    {
+        flex-direction: column;
+        align-items: normal;
+    }
+    .channel-name
+    {
+        font-size: 20px;
+        font-weight: 500;
+        font-family: Jura;
+    }
+    .profile-picture
+    {
+        height: 70px;
+        width: 70px;
+    }
+    .channel-banner 
+    {
+        height: 180px;
+    }
+    .user-name, .subscribers
+    {
+        font-size: 13px;
     }
 }

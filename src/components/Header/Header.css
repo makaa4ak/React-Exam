@@ -33,22 +33,18 @@
 } 
 .section.middle { 
     justify-content: center; 
-    /* border: 1px solid violet;  */
 } 
 .section.right { 
     justify-content: end; 
     margin-right: 50px; 
-    /* border: 2px solid rgb(39, 151, 255);  */
 } 
-    .right img, .icon-mic, .logo 
+    .right img, .icon-mic
     { 
-        margin: 10px; 
+        margin-left: 15px; 
         cursor: pointer; 
     } 
      
 .section.left { 
-    /* border: 1px solid rgb(78, 161, 0);  */
- 
     justify-content: start; 
     margin-left: 50px; 
 } 
@@ -56,7 +52,6 @@
 .input-container 
 { 
     position: relative; 
-    /* border: 1px solid yellow;  */
     display: flex; 
     align-items: center; 
     justify-content: end; 
@@ -107,6 +102,7 @@
         {
             width: 44px;
             height: 44px;
+            margin: 10px;
         }
 
         .channel-name
@@ -129,14 +125,8 @@
     right: 0;
     border-radius: 10px;
     overflow: hidden;
+}
 
-}
-.dropdown-content-scroll
-{
-    /* background-color: red; */
-    height: 300px;
-    overflow-y: scroll;
-}
 .dropdown-content-scroll::-webkit-scrollbar {
     width: 5px;
 }
@@ -152,6 +142,7 @@
     cursor: pointer;
     display: flex;
     align-items: center;
+    /* padding: 10px 0px 10px; */
 
     p {
         text-align: center;
@@ -161,6 +152,7 @@
     {
         width: 26px;
         height: 26px;
+        margin: 8px;
     }
     .arrow
     {
@@ -183,12 +175,10 @@
 }
 .section.middle.resize
 {
-    /* background-color: red!important; */
     display: flex!important;
 }
 .header .input-search.resize
 {
-    /* background-color: violet; */
     width: 60vw!important;  
 }
 .minimize-body
@@ -208,7 +198,6 @@
     .section.middle
     {
         display: none;
-        /* background-color: blue; */
     }
     .minimize-body
     {
@@ -219,13 +208,14 @@
 {
     display: initial;
 }
-} 
-@media (max-width: 1299px) { 
+}
+
+@media (max-width: 900px) { 
     .section.right { 
-        padding-right: 0px; 
-     
+        margin-right: 30px; 
+        
     } 
     .section.left { 
-        padding-left: 0px; 
+        margin-left: 30px; 
     } 
 }

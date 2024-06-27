@@ -32,6 +32,7 @@ const videoData = [
       date: "1 year ago",
     }
   ];
+
 const chipNames = [
     'Home',
     'Videos',
@@ -89,10 +90,13 @@ export default function Channel()
                             <p className='user-name'>@kltrons</p>
                             <p className='subscribers'>300 subscribers</p>
                         </div>
-                        <div className='row-section'>
+                        <div className='button-row'>
                             <button className='btn-control'>Video Control</button>
-                            <img className='icon' src='/images/icons/bar_chart.svg'/>
-                            <img className='icon'  src='/images/icons/heart.svg'/>
+                            <div className='row'>
+                              <img className='icon' src='/images/icons/bar_chart.svg'/>
+                              <img className='icon'  src='/images/icons/heart.svg'/>
+                            </div>
+                            
                         </div>
                     </div>
                 </div>
