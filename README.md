@@ -10,7 +10,7 @@ Subscriptions - Kalanzhova\
 \
 Components:\
 Sidebar - Kalanzhova\
-Header - Kalanzhova\
+Header - Kalanzhova \
 VideoPreview - Kalanzhova\
 OtherVideos - Ganich\
 Comment - Ganich\

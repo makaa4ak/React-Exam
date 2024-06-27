@@ -127,8 +127,10 @@ export default function Header() {
                 onClick={toggleDropdown}
               />
               <div className={`dropdown-content ${isDropdownVisible ? 'show' : ''}`}>
-                <div>
-                    {renderItems(dropdownSections)}
+                <div className='dropdown-content-scroll'>
+                  <div>
+                      {renderItems(dropdownSections)}
+                  </div>
                 </div>
               </div>
             </div>

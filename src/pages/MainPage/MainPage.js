@@ -36,7 +36,6 @@ const videoData = [
 const renderVideos = (videos) => {
   return videos.map((video, index) => (
     <Link to='/video'>
-      
     <div className='item-wrapper' key={index}>
       <img className='thumbnail' src={video.src} alt="Video thumbnail" />
       <div className='info-section'>
@@ -65,11 +64,43 @@ export default function MainPage() {
     <div className="main">
       <div className='main--container'>
         <div className='banner'>
+          <div className='banner-contents'>
+            <div className='banner-text-container'>
+              <h1 className='banner-text'>ВЕДИ МЕНЕ В ХРАМ</h1>
+              <h1 className='banner-text grey'>(TAKE ME TO CHURCH УКРАЇНСЬКОЮ)</h1>
+            </div>
+            <div className='banner-items'>
+              <div className='banner-wrapper'>
+                <div className='row'>
+                <div className='row'>
+                  <button className='button-watch'>Watch</button>
+                  <h2 className='banner-text'>Enleo • 5m views • 6 day ago</h2>
+                </div>
+                <div className='carousel row right'>
+                  <img src='/images/icons/arrow_back_ios.svg'/>
+                  <div className='carousel-item'>
+                    <img className='carousel-img' src='./images/carousel/img1.png'/>
+                  </div>
+                  <div className='carousel-item'>
+                    <img className='carousel-img' src='./images/carousel/img2.png'/>
+                  </div>
+                  <div className='carousel-item'>
+                    <img className='carousel-img' src='./images/banner.jpg'/>
+                  </div>
+                  <img src='/images/icons/arrow_back_ios_r.svg'/>
+                </div>
+                </div>
+                <div className='progress-bar'>
+                  <div className='time'/>
+                </div>
+                <p className='time-text'>3:55</p>
+              </div>
+            </div>
+          </div>
           <div className='banner-gradient-side'></div>
           <div className='banner-gradient-bottom'></div>
         </div>
       </div>
-
       <div className='horizontal-scroller'>
         <div className='gradient right'></div>
         <div className='gradient left'></div>
