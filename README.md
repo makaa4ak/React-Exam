@@ -2,11 +2,11 @@ Exam "YouTube Clone"\
 \
 Pages:\
 Sing in - Babich\
-Sing up - Babich\
+Sing up - Babich\ 
 Main - Kalanzhova\
 Video - Ganich\
-Channel - \
-Subscriptions - Babich\
+Channel - Kalanzhova \
+Subscriptions - Kalanzhova\
 \
 Components:\
 Sidebar - Kalanzhova\
