@@ -170,8 +170,33 @@ const VideoPage = () => {
               </div>
             </div>
 
-        
-        
+
+
+
+            <div className="comment-wrapper">
+      <p className="comment-profile">Comment</p>
+      <div className="comment-container">
+        <img
+          className="profile-pic"
+          src="/images/header-images/acc.svg"
+          alt="Profile"
+        />
+        <input
+          type="text"
+          className="comment-input"
+          placeholder="Add a comment"
+        />
+        <div className="icons">
+          <span className="icon-smile"><img src="/images/icons/emoji.svg" alt="More" /></span>
+          <span className="icon-at"><img src="/images/icons/Vector.svg" alt="More" /></span>
+          <span className="icon-send"><img src="/images/icons/Frame.svg" alt="More" /></span>
+        </div>
+      </div>
+    </div>
+
+
+
+    
         <CommentList />
       </main>
 
