@@ -247,3 +247,29 @@ body {
 .icon-smile, .icon-at, .icon-send {
   cursor: pointer;
 }
+/* <div className="description"> */
+
+.description{
+  margin-bottom: 20px ;
+}
+
+
+
+
+
+@media (max-width: 1400px) {
+  .recommended-videos {
+      display: none;
+  }
+  .video-container{
+    height: 40%;
+  }
+}
+
+
+@media (max-width: 1000px) {
+
+  .video-container{
+    height: 20%;
+  }
+}
