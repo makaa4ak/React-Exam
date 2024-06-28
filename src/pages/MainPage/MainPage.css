@@ -382,4 +382,8 @@ display: flex;
     {
         border-radius: 10px;
     }
+    .banner-contents
+    {
+        padding: 10px;
+    }
 }
